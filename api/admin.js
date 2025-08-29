@@ -11,7 +11,7 @@ export function setPuffCounts(counts, token) {
       console.log("Using base URL:", baseUrl);
       return baseUrl;
     }
-    
+
     // Fallback for non-browser environments
     return "";
   };
@@ -21,7 +21,7 @@ export function setPuffCounts(counts, token) {
   console.log("Making API request to:", getBaseUrl() + apiUrl);
   console.log("With token:", token);
   console.log("And data:", counts);
-  
+
   try {
     const response = fetch(apiUrl, {
       method: "POST",
@@ -33,15 +33,15 @@ export function setPuffCounts(counts, token) {
     });
 
     return response
-      .then(res => {
+      .then((res) => {
         if (!res.ok) {
-          return res.json().then(err => {
+          return res.json().then((err) => {
             throw new Error(err.error || "Failed to update puff counts");
           });
         }
         return res.json();
       })
-      .catch(error => {
+      .catch((error) => {
         console.error("API Error:", error);
         throw error;
       });

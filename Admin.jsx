@@ -38,7 +38,7 @@ export default function Admin() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50 p-4">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50 p-4 pb-20">
       <div className="max-w-md mx-auto">
         <div className="bg-white rounded-2xl shadow-lg p-6">
           <div className="text-center mb-6">
@@ -125,15 +125,6 @@ export default function Admin() {
               {loading ? "Updating..." : "Update Counts"}
             </button>
           </form>
-
-          <div className="mt-6 text-center">
-            <a
-              href="/"
-              className="text-orange-500 hover:text-orange-600 font-medium"
-            >
-              ← Back to App
-            </a>
-          </div>
         </div>
       </div>
     </div>
